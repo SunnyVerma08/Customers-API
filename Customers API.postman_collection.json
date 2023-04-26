@@ -1,0 +1,103 @@
+{
+  "info": {
+    "_postman_id": "d1da6a76-75d2-4631-81fe-da0b1488d4b8",
+    "name": "Customers API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET /customers",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/customers?page=1&limit=10",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["customers"],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "10"
+            },
+            {
+              "key": "first_name",
+              "value": "Amit",
+              "disabled": true
+            },
+            {
+              "key": "last_name",
+              "value": "Kumar",
+              "disabled": true
+            },
+            {
+              "key": "city",
+              "value": "Mumbai",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /customers/:id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/customers/50",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["customers", "50"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /cities",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/cities",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["cities"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /customers",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \n  \"first_name\": \"Sunny\",\n  \"last_name\": \"Verma\",\n  \"city\": \"Delhi\",\n  \"company\": \"SublimeDataSystems\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/customers",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["customers"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
